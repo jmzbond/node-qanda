@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>Q and A</title>
+		<style>
+			body {
+				font-family: arial;
+			}
+			#question {
+				font-size: 35px;
+				color: purple;
+			}
+			#answers {
+				font-size: 19px;
+			}
+			#answers .answer {
+				margin-bottom: 20px;
+				clear: both;
+				margin-bottom: 8px;
+				height: 40px;
+			}
+			#answers .answer .score {
+				font-size: 28px;
+				float: left;
+				width: 80px;
+				background-color: orange;
+				height: 40px;
+				display: block;
+				text-align: center;
+				line-height: 36px;
+				color: white;
+				border-radius: 4px;
+			}
+			#answers .answer .up,
+			#answers .answer .down {
+				float: left;
+				font-size: 31px;
+				cursor: pointer;
+			}
+			#answers .answer .up {
+				color: green;
+			}
+			#answers .answer .down {
+				color: red;
+			}
+
+			#answers .answer .text {
+				float: left;
+				height: 40px;
+				line-height: 36px;
+				padding-left: 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="question">Loading...</div>
+		<div id="answers">Loading...</div>
+
+		<textarea id="new_answer" rows="4" cols="50" placeholder="New Answer..."></textarea><br />
+		<button id="submit">Submit Answer</button>
+
+		<script src="/jquery.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/client.js"></script>
+	</body>
+</html>
